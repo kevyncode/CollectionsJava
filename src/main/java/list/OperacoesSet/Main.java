@@ -10,6 +10,7 @@ public class Main {
         conjuntoConvidados.adicionarConvidado("Alice", 101);
         conjuntoConvidados.adicionarConvidado("Bob", 102);
         conjuntoConvidados.adicionarConvidado("Carlos", 103);
+        conjuntoConvidados.adicionarConvidado("Pietro", 103);
 
         // Exibe os convidados
         System.out.println("Convidados após adição:");

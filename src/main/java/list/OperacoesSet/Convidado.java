@@ -1,5 +1,7 @@
 package main.java.list.OperacoesSet;
 
+import java.util.Objects;
+
 public class Convidado {
 
     // Atributos privados para armazenar o nome do convidado e o código do convite
@@ -36,6 +38,19 @@ public class Convidado {
         return codigoConvite;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Convidado convidado = (Convidado) o;
+        return codigoConvite == convidado.codigoConvite;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(codigoConvite);
+    }
+
     /**
      * Retorna uma representação em String do objeto Convidado.
      * Isso é útil para depuração e para imprimir informações do convidado.
@@ -44,9 +59,6 @@ public class Convidado {
      */
     @Override
     public String toString() {
-        return "Convidado{" +
-                "nome='" + nome + '\'' +
-                ", codigoConvite=" + codigoConvite +
-                '}';
+        return "Nome do convidado: " + nome + " codigoConvite= " + codigoConvite + '}';
     }
 }
